@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    group = 'ru.webservice'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '1.8'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation platform ('org.springframework.boot:spring-boot-dependencies:2.1.1.RELEASE')
+        implementation ('org.projectlombok:lombok:1.16.8')
+        compile ('org.springframework.boot:spring-boot-starter-security:1.5.1.RELEASE')
+       
+        testImplementation ('org.springframework.boot:spring-boot-starter-test')
+    }
+}
